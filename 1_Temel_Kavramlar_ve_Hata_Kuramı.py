@@ -16,7 +16,7 @@ numberSS=numbers.split(",")
 toplam = 0
 for l in numberSS:
    toplam = toplam + float(l)
-print("Sayıların aritmetik ortalaması: {0:.3f}".format(toplam / len(numberSS)))
+print("Sayıların aritmetik ortalaması: {0:.7f}".format(toplam / len(numberSS)))
 
 # [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 A = toplam / len(numberSS)
@@ -25,25 +25,27 @@ for l in numberSS:
    E_mm = float(l) - A
    print("E:", E_mm)
    E_mm += E_mm
-print("[|E|]: {0:.3f}".format(abs(E_mm)))
+print("[|E|]: {0:.7f}".format(abs(E_mm)))
 
 # [|EE|] sayıların kareler toplamı
 EE_mm = A
 for l in numberSS:
    EE_mm = float(l) - A
-   print("E:", EE_mm)
+   print("EE:", EE_mm)
    EE_mm += EE_mm ** 2
-print("[|EE|]: {0:.3f}".format(abs(EE_mm)))
+print("[|EE|]: {0:.7f}".format(abs(EE_mm)))
 
 # Ortalama hata hesabı (m)
 m = (EE_mm / len(numberSS)) ** (1/2)
-print("Ortalama hata: ±{0:.3f}".format(m))
+print("Ortalama hata: ±{0:.7f}".format(m))
 
 # Mutlak hata hesabı (t)
 t = E_mm / len(numberSS)
-print("Mutlak hata: ±{0:.3f}".format(t))
+print("Mutlak hata: ±{0:.7f}".format(t))
 
 # Olası hata (medyan) hesabı (r)
+r = ??
+print("Olası hata (Medyan): ±{0:.7f}".format(r))
 
 
 # n: Ölçü sayısı
