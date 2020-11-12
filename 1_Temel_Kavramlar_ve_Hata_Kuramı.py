@@ -1,3 +1,4 @@
+# A: Aritmetik Ortalama
 # m: Ortalama Hata
 # t: Mutlak Hata
 # r: Olası Hata
@@ -6,14 +7,15 @@
 import math
 
 numbers = input("Virgül ile sayıları gir: ")
-print("Girdiğiniz Sayılar: {0}".format(numbers))
+print("Girilen sayılar: {0}".format(numbers))
 
 numberSS=numbers.split(",")
 toplam = 0
 for n in numberSS:
    toplam = toplam + float(n)
 
-print("GİRDİĞİNİZ SAYILARIN ORTALMASI:{0:.2f} ".format(toplam / len(numberSS)))
+print("Sayıların aritmetik ortalaması:{0:.2f} ".format(toplam / len(numberSS)))
+A = toplam / len(numberSS)
 
 # n: Ölçü sayısı
 # u: Bilinmeyen sayısı
