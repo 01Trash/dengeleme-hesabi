@@ -2,6 +2,8 @@
 # m: Ortalama Hata
 # t: Mutlak Hata
 # r: Olası Hata
+# Emm: |E| Sayıların aritmetik ortalaması ile farklarının mutlak toplamı
+# EEmm: |E| kareler toplamı
 
 # Kütüphane;
 import math
@@ -13,9 +15,17 @@ numberSS=numbers.split(",")
 toplam = 0
 for n in numberSS:
    toplam = toplam + float(n)
-
 print("Sayıların aritmetik ortalaması:{0:.2f} ".format(toplam / len(numberSS)))
+
 A = toplam / len(numberSS)
+Emm = A
+for n in numberSS:
+   Emm = A - float(n)
+   print("E:", Emm)
+   Emm += Emm
+print("[|E|]: ", abs(Emm))
+
+
 
 # n: Ölçü sayısı
 # u: Bilinmeyen sayısı
