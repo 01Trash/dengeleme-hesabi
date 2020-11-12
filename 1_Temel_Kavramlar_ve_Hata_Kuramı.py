@@ -1,4 +1,5 @@
 # A: Aritmetik Ortalama
+# l: Ölçmeler
 # m: Ortalama Hata
 # t: Mutlak Hata
 # r: Olası Hata
@@ -13,23 +14,23 @@ print("Girilen sayılar: {0}".format(numbers))
 
 numberSS=numbers.split(",")
 toplam = 0
-for n in numberSS:
-   toplam = toplam + float(n)
+for l in numberSS:
+   toplam = toplam + float(l)
 print("Sayıların aritmetik ortalaması: {0:.3f}".format(toplam / len(numberSS)))
 
 # [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 A = toplam / len(numberSS)
 E_mm = A
-for n in numberSS:
-   E_mm = float(n) - A
+for l in numberSS:
+   E_mm = float(l) - A
    print("E:", E_mm)
    E_mm += E_mm
 print("[|E|]: {0:.3f}".format(abs(E_mm)))
 
 # [|EE|] sayıların kareler toplamı
 EE_mm = A
-for n in numberSS:
-   EE_mm = float(n) - A
+for l in numberSS:
+   EE_mm = float(l) - A
    print("E:", EE_mm)
    EE_mm += EE_mm ** 2
 print("[|EE|]: {0:.3f}".format(abs(EE_mm)))
