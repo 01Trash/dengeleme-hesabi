@@ -44,7 +44,7 @@ t = E_mm / len(numberSS)
 print("Mutlak hata: ±{0:.7f}".format(t))
 
 # Olası hata (medyan) hesabı (r)
-r = ??
+r = 0
 print("Olası hata (Medyan): ±{0:.7f}".format(r))
 
 
