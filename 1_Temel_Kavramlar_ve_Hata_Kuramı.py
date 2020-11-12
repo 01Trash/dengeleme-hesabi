@@ -2,8 +2,8 @@
 # m: Ortalama Hata
 # t: Mutlak Hata
 # r: Olası Hata
-# Emm: |E| Sayıların aritmetik ortalaması ile farklarının mutlak toplamı
-# EEmm: |E| kareler toplamı
+# E_mm: |E| Sayıların aritmetik ortalaması ile farklarının mutlak toplamı
+# EE_mm: |EE| kareler toplamı
 
 # Kütüphane;
 import math
@@ -17,13 +17,21 @@ for n in numberSS:
    toplam = toplam + float(n)
 print("Sayıların aritmetik ortalaması:{0:.2f} ".format(toplam / len(numberSS)))
 
+# Sayıların aritmetik ortalaması ile farklarının mutlak toplamı hesabı
 A = toplam / len(numberSS)
-Emm = A
+E_mm = A
 for n in numberSS:
-   Emm = A - float(n)
-   print("E:", Emm)
-   Emm += Emm
-print("[|E|]: ", abs(Emm))
+   E_mm = float(n) - A
+   print("E:", E_mm)
+   E_mm += E_mm
+print("[|E|]: ", abs(E_mm))
+
+EE_mm = A
+for n in numberSS:
+   EE_mm = float(n) - A
+   print("E:", EE_mm)
+   EE_mm += EE_mm ** 2
+print("[|EE|]: ", abs(EE_mm))
 
 
 
