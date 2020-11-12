@@ -1,11 +1,31 @@
-#print("Bu örnek kullanıcı tarafıdan virgül ile girilen sayıların ortalamasını hesaplar")
+# n: Ölçü sayısı
+# u: Bilinmeyen sayısı
+# d: Datum efekt
+# f: Kesin değer
+"""
+f = n - u + d
+Fazla ölçü sayısı veya serbestlik derecesi olmak üzere kesin değerin hesabı;
+f > 0 ise dengeleme ile yapılır.
+f = 0 ise cebrik çözüm ile yapılır (Ölçme problemidir.).
+f < 0 ise sonsuz sayıda çözüm ile yapılır.
+"""
+# L: Ölçü
+# N: Gerçek değer
+# X: Kesin değer
+# E: Hata
+# V: Düzeltme
+"""
+E = N - L
+V = X - L
+"""
+# Mutlak hata (Ei) = Ölçü (Li) - Gerçek değer (N)
 
-numaralar = input("Virgül ile sayıları gir: ")
-print("Girdiğiniz Sayılar: {0}".format(numaralar))
+numbers = input("Virgül ile sayıları gir: ")
+print("Girdiğiniz Sayılar: {0}".format(numbers))
 
-numaralarArr=numaralar.split(",")
+numberSS=numbers.split(",")
 toplam = 0
-for n in numaralarArr:
+for n in numberSS:
    toplam = toplam + float(n)
 
-print("GİRDİĞİNİZ SAYILARIN ORTALMASI:{0:.2f} ".format(toplam / len(numaralarArr)))
+print("GİRDİĞİNİZ SAYILARIN ORTALMASI:{0:.2f} ".format(toplam / len(numberSS)))
