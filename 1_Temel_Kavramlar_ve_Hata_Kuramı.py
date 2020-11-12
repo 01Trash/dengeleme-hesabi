@@ -34,6 +34,14 @@ for n in numberSS:
    EE_mm += EE_mm ** 2
 print("[|EE|]: ", abs(EE_mm))
 
+# Ortalama hata hesabı (m)
+m = (EE_mm / len(numberSS)) ** (1/2)
+print("Ortalama hata: ", m)
+
+# Mutlak hata hesabı (t)
+t = E_mm / len(numberSS)
+print("Mutlak hata: ", t)
+
 
 
 # n: Ölçü sayısı
