@@ -1,2 +1,1 @@
-# dengeleme-hesabi
-Dengeleme Hesabı
+# Dengeleme Hesabı
