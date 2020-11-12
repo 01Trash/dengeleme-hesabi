@@ -1,3 +1,20 @@
+# m: Ortalama Hata
+# t: Mutlak Hata
+# r: Olası Hata
+
+# Kütüphane;
+import math
+
+numbers = input("Virgül ile sayıları gir: ")
+print("Girdiğiniz Sayılar: {0}".format(numbers))
+
+numberSS=numbers.split(",")
+toplam = 0
+for n in numberSS:
+   toplam = toplam + float(n)
+
+print("GİRDİĞİNİZ SAYILARIN ORTALMASI:{0:.2f} ".format(toplam / len(numberSS)))
+
 # n: Ölçü sayısı
 # u: Bilinmeyen sayısı
 # d: Datum efekt
@@ -19,13 +36,7 @@ E = N - L
 V = X - L
 """
 # Mutlak hata (Ei) = Ölçü (Li) - Gerçek değer (N)
+"""Mutlak Ortalama Hata
 
-numbers = input("Virgül ile sayıları gir: ")
-print("Girdiğiniz Sayılar: {0}".format(numbers))
+"""
 
-numberSS=numbers.split(",")
-toplam = 0
-for n in numberSS:
-   toplam = toplam + float(n)
-
-print("GİRDİĞİNİZ SAYILARIN ORTALMASI:{0:.2f} ".format(toplam / len(numberSS)))
