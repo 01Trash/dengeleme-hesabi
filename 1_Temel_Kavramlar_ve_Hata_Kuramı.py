@@ -42,7 +42,7 @@ print("Ortalama hata: ±{0:.3f}".format(m))
 t = E_mm / len(numberSS)
 print("Mutlak hata: ±{0:.3f}".format(t))
 
-# Olası hata hesabı (r)
+# Olası hata (medyan) hesabı (r)
 
 
 # n: Ölçü sayısı
