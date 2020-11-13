@@ -6,7 +6,6 @@
 # E_mm: [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 # EE_mm: [|EE|] sayıların kareler toplamı
 
-# Kütüphane;
 import math
 
 numbers = input("Virgül ile sayıları gir: ")
