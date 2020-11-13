@@ -13,7 +13,7 @@ import numpy
 
 numbers = input("Virgül ile sayıları gir: ")
 #print("Girilen sayılar: {0}".format(numbers))
-print("########################################################")
+print("####################################################")
 
 numberSS=numbers.split(",")
 toplam = 0
