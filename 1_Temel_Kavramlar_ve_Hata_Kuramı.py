@@ -7,6 +7,7 @@
 # EE_mm: [|EE|] sayıların kareler toplamı
 
 import math
+import statistics
 
 numbers = input("Virgül ile sayıları gir: ")
 print("Girilen sayılar: {0}".format(numbers))
@@ -20,9 +21,11 @@ print("Sayıların aritmetik ortalaması: {0:.7f}".format(toplam / len(numberSS)
 # [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 A = toplam / len(numberSS)
 E_mm = A
+E_mm_Numbers = []
 for l in numberSS:
    E_mm = float(l) - A
    print("E:", E_mm)
+   E_mm_Numbers.append(abs(E_mm))
    E_mm += E_mm
 print("[|E|]: {0:.7f}".format(abs(E_mm)))
 
@@ -43,7 +46,7 @@ t = E_mm / len(numberSS)
 print("Mutlak hata: ±{0:.7f}".format(t))
 
 # Olası hata (medyan) hesabı (r)
-r = 0
+r = statistics.median(E_mm_Numbers)
 print("Olası hata (Medyan): ±{0:.7f}".format(r))
 
 
