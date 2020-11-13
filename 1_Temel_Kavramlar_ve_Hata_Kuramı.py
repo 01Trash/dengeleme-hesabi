@@ -8,6 +8,7 @@
 
 import math
 import statistics
+import numpy
 
 numbers = input("Virgül ile sayıları gir: ")
 print("Girilen sayılar: {0}".format(numbers))
@@ -15,7 +16,7 @@ print("Girilen sayılar: {0}".format(numbers))
 numberSS=numbers.split(",")
 toplam = 0
 for l in numberSS:
-   toplam = toplam + float(l)
+   toplam = toplam + numpy.longdouble(l)
 print("Sayıların aritmetik ortalaması: {0:.7f}".format(toplam / len(numberSS)))
 
 # [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
@@ -23,7 +24,7 @@ A = toplam / len(numberSS)
 E_mm = A
 E_mm_Numbers = []
 for l in numberSS:
-   E_mm = float(l) - A
+   E_mm = (numpy.longdouble(l) - A) * 1000
    print("E:", E_mm)
    E_mm_Numbers.append(abs(E_mm))
    E_mm += E_mm
@@ -32,7 +33,7 @@ print("[|E|]: {0:.7f}".format(abs(E_mm)))
 # [|EE|] sayıların kareler toplamı
 EE_mm = A
 for l in numberSS:
-   EE_mm = float(l) - A
+   EE_mm = (numpy.longdouble(l) - A) * 1000
    print("EE:", EE_mm)
    EE_mm += EE_mm ** 2
 print("[|EE|]: {0:.7f}".format(abs(EE_mm)))
