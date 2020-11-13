@@ -3,6 +3,7 @@
 # m: Ortalama Hata
 # t: Mutlak Hata
 # r: Olası Hata
+# b: Bağıl hata
 # E_mm: [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 # EE_mm: [|EE|] sayıların kareler toplamı
 
@@ -53,6 +54,10 @@ print("Mutlak hata: ±{0:.7f} mm".format(t))
 # Olası hata (medyan) hesabı (r)
 r = statistics.median(E_mm_Numbers)
 print("Olası hata (Medyan): ±{0:.7f} mm".format(r))
+
+# Bağıl hata hesabı (b)
+b = m / A
+print("Bağıl hata: ±{0:.7f} mm".format(b))
 
 
 # n: Ölçü sayısı
