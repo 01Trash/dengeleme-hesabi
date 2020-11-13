@@ -11,13 +11,14 @@ import statistics
 import numpy
 
 numbers = input("Virgül ile sayıları gir: ")
-print("Girilen sayılar: {0}".format(numbers))
+#print("Girilen sayılar: {0}".format(numbers))
+print("########################################################")
 
 numberSS=numbers.split(",")
 toplam = 0
 for l in numberSS:
    toplam = toplam + numpy.longdouble(l)
-print("Sayıların aritmetik ortalaması: {0:.7f}".format(toplam / len(numberSS)))
+print("Sayıların aritmetik ortalaması: {0:.7f} m".format(toplam / len(numberSS)))
 
 # [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
 A = toplam / len(numberSS)
@@ -25,35 +26,33 @@ E_mm = A
 E_mm_Numbers = []
 for l in numberSS:
    E_mm = (numpy.longdouble(l) - A) * 1000
-   print("E:", E_mm)
+   #print("E:", E_mm)
    E_mm = abs((numpy.longdouble(l) - A) * 1000)
    E_mm_Numbers.append(abs(E_mm))
    E_mm += E_mm
-print("[|E|]: {0:.7f}".format(abs(E_mm)))
+print("[|E|]: {0:.7f} mm".format(abs(E_mm)))
 
 # [|EE|] sayıların kareler toplamı
 EE_mm = A
 for l in numberSS:
    EE_mm = (numpy.longdouble(l) - A) * 1000
-   print("EE:", EE_mm)
+   #print("EE:", EE_mm)
    EE_mm = abs((numpy.longdouble(l) - A) * 1000)
-   ###print("###EE_mm:: ", EE_mm)
    EE_mm_2 = EE_mm ** 2
    EE_mm_2 = EE_mm_2 + EE_mm ** 2
-   ###print("###EE_mm_2: ", EE_mm_2)
-print("[|EE|]: {0:.7f}".format(abs(EE_mm_2)))
+print("[|EE|]: {0:.7f} mm".format(abs(EE_mm_2)))
 
 # Ortalama hata hesabı (m)
 m = (EE_mm_2 / len(numberSS)) ** (1/2)
-print("Ortalama hata: ±{0:.7f}".format(m))
+print("Ortalama hata: ±{0:.7f} mm".format(m))
 
 # Mutlak hata hesabı (t)
 t = E_mm / len(numberSS)
-print("Mutlak hata: ±{0:.7f}".format(t))
+print("Mutlak hata: ±{0:.7f} mm".format(t))
 
 # Olası hata (medyan) hesabı (r)
 r = statistics.median(E_mm_Numbers)
-print("Olası hata (Medyan): ±{0:.7f}".format(r))
+print("Olası hata (Medyan): ±{0:.7f} mm".format(r))
 
 
 # n: Ölçü sayısı
