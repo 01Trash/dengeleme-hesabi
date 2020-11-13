@@ -26,6 +26,7 @@ E_mm_Numbers = []
 for l in numberSS:
    E_mm = (numpy.longdouble(l) - A) * 1000
    print("E:", E_mm)
+   E_mm = abs((numpy.longdouble(l) - A) * 1000)
    E_mm_Numbers.append(abs(E_mm))
    E_mm += E_mm
 print("[|E|]: {0:.7f}".format(abs(E_mm)))
@@ -35,11 +36,15 @@ EE_mm = A
 for l in numberSS:
    EE_mm = (numpy.longdouble(l) - A) * 1000
    print("EE:", EE_mm)
-   EE_mm += EE_mm ** 2
-print("[|EE|]: {0:.7f}".format(abs(EE_mm)))
+   EE_mm = abs((numpy.longdouble(l) - A) * 1000)
+   ###print("###EE_mm:: ", EE_mm)
+   EE_mm_2 = EE_mm ** 2
+   EE_mm_2 = EE_mm_2 + EE_mm ** 2
+   ###print("###EE_mm_2: ", EE_mm_2)
+print("[|EE|]: {0:.7f}".format(abs(EE_mm_2)))
 
 # Ortalama hata hesabı (m)
-m = (EE_mm / len(numberSS)) ** (1/2)
+m = (EE_mm_2 / len(numberSS)) ** (1/2)
 print("Ortalama hata: ±{0:.7f}".format(m))
 
 # Mutlak hata hesabı (t)
