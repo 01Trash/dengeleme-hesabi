@@ -4,8 +4,8 @@
 
 Yapılmış olan ölçümlerin
 - Sayıların aritmetik ortalaması
-- [|E|]
-- [|EE|]
+- [|E|] sayıların aritmetik ortalaması ile farkının mutlak toplamı
+- [|EE|] sayıların aritmetik ortalaması ile farkının kareler toplamı
 - Ortalama hata m0
 - Mutlak hata t
 - Olası hata (Medyan)
