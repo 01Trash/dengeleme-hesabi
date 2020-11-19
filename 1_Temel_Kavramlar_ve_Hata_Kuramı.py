@@ -44,7 +44,7 @@ for l in numberSS:
 print("[|EE|]: {0:.7f} mm".format(abs(EE_mm_2)))
 
 # Ortalama hata hesabı (m)
-m = (EE_mm_2 / len(numberSS)) ** (1/2)
+m = (EE_mm_2 / len(numberSS)) ** (0.5)
 print("Ortalama hata: ±{0:.7f} mm".format(m))
 
 # Mutlak hata hesabı (t)
