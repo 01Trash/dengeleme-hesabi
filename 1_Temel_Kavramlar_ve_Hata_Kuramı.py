@@ -55,11 +55,11 @@ print("[|EE|]: {0:.7f} mm".format(abs(toplam_EE_mm_2_Numbers)))
 
 # Ortalama hata hesabı (m)
 m = (toplam_EE_mm_2_Numbers / len(numberSS)) ** (0.5)
-print("Ortalama hata: ±{0:.7f} mm".format(m))
+print("Ortalama hata m0: ±{0:.7f} mm".format(m))
 
 # Mutlak hata hesabı (t)
 t = toplam_E_mm_Numbers / len(numberSS)
-print("Mutlak hata: ±{0:.7f} mm".format(t))
+print("Mutlak hata t: ±{0:.7f} mm".format(t))
 
 # Olası hata (medyan) hesabı (r)
 r = statistics.median(E_mm_Numbers)
