@@ -2,7 +2,7 @@
 
 ## 1_Temel_Kavramlar_ve_Hata_Bilgisi.py
 
-Yapılmış olan ölçümlerin
+'Yapılmış olan ölçümlerin'
 - Sayıların aritmetik ortalaması
 - [|E|]
 - [|EE|]
