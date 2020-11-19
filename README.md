@@ -11,4 +11,4 @@ Yapılmış olan ölçümlerin
 - Olası hata (Medyan)
 - Bağıl hata
 
-değerini hesaplamak için yapılmıştır.
+değerlerini hesaplamak için yapılmıştır.
