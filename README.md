@@ -10,4 +10,5 @@ Yapılmış olan ölçümlerin
 - Mutlak hata t
 - Olası hata (Medyan)
 - Bağıl hata
+
 değerini hesaplamak için yapılmıştır.
