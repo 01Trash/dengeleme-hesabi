@@ -11,7 +11,7 @@ import math
 import statistics
 import numpy
 
-numbers = input("Virgül ile sayıları gir: ")
+numbers = input("Arada virgül olacak şekilde sayıları gir: ")
 #print("Girilen sayılar: {0}".format(numbers))
 print("####################################################")
 
