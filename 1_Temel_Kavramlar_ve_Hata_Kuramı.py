@@ -68,30 +68,3 @@ print("Olası hata (Medyan): ±{0:.7f} mm".format(r))
 # Bağıl hata hesabı (b)
 b = m / A
 print("Bağıl hata: ±{0:.7f} mm".format(b))
-
-
-# n: Ölçü sayısı
-# u: Bilinmeyen sayısı
-# d: Datum efekt
-# f: Kesin değer
-"""
-f = n - u + d
-Fazla ölçü sayısı veya serbestlik derecesi olmak üzere kesin değerin hesabı;
-f > 0 ise dengeleme ile yapılır.
-f = 0 ise cebrik çözüm ile yapılır (Ölçme problemidir.).
-f < 0 ise sonsuz sayıda çözüm ile yapılır.
-"""
-# L: Ölçü
-# N: Gerçek değer
-# X: Kesin değer
-# E: Hata
-# V: Düzeltme
-"""
-E = N - L
-V = X - L
-"""
-# Mutlak hata (Ei) = Ölçü (Li) - Gerçek değer (N)
-"""Mutlak Ortalama Hata
-
-"""
-
