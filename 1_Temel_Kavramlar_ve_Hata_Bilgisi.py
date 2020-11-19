@@ -4,8 +4,8 @@
 # t: Mutlak Hata
 # r: Olası Hata
 # b: Bağıl hata
-# E_mm: [|E|] sayıların aritmetik ortalaması ile farklarının mutlak toplamı
-# EE_mm: [|EE|] sayıların kareler toplamı
+# E_mm: [|E|] sayıların aritmetik ortalaması ile farkının mutlak toplamı
+# EE_mm: [|EE|] sayıların aritmetik ortalaması ile farkının kareler toplamı
 
 import math
 import statistics
